@@ -1,20 +1,23 @@
 """
-Calculations library
+    library file
 """
 
-#var=
+import pandas as pd
 
-def add(a, b):
-    return a + b
-
-
-def subtract(a, b):
-    return a - b
+dataset = "https://raw.githubusercontent.com/fivethirtyeight/data/master/district-urbanization-index-2022/urbanization-index-2022.csv"
 
 
-def multiply(a, b):
-    return a * b
+def load_dataset():
+    df = pd.read_csv(dataset)
+    return df
 
 
-def divide(a, b):
-    return a / b
+def grab_mean(df, col):
+    return df[col].mean()
+
+
+# def create_histogram(df, col):
+
+# def grab_median
+# def grab STD
+# def grab max
