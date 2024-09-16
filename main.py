@@ -1,20 +1,37 @@
-"""
-Main cli or app entry point
-"""
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-from mylib.calculator import load_dataset
-import click
+# Load job applicant csv file into dataframe
+job_applicants_df = pd.read_csv("Job_Applicants_by_Gender_and_Ethnicity.csv")
 
-
-def g_describe():
-    g = load_dataset()
-    return g_describe()
+gender_total = job_applicants_df[["Female", "Male"]].sum()
 
 
-def save_to_md():
-    with open("test.md", "a") as file:
-        file.write("test")
+# Generate a summary of statistics
+# List key indicators, including mean, median, standar deviation
+def stats_overview():
+    summary_stats = job_applicants_df[["Apps Received", "Female", "Male"]].describe()
+    summary_stats.loc["median"] = job_applicants_df[
+        ["Apps Received", "Female", "Male"]
+    ].median()
+    summary_stats.loc["total"] = job_applicants_df[
+        ["Apps Received", "Female", "Male"]
+    ].sum()
+    summary_stats = summary_stats.round(2)
+    print(summary_stats)
+
+
+# Data visualization: Gender chart
+def gender_chart():
+    plt.figure(figsize=(10, 6))
+    bars = plt.bar(gender_total.index, gender_total.values)
+    plt.title("Number of Applicants by Gender")
+    plt.xlabel("Gender")
+    plt.ylabel("Number of Applicants")
+    plt.show()
 
 
 if __name__ == "__main__":
-    save_to_md()
+    stats_overview()
+    gender_chart()

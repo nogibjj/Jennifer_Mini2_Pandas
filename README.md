@@ -1,37 +1,20 @@
-[![CI](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml)
-## Template for Python projects with RUFF linter
 
-![1 15_rust_built_python_tools](https://github.com/nogibjj/python-ruff-template/assets/58792/db5f7bda-a977-4c67-acbe-a70fe034fbdf)
+# Mini Project 2: Pandas Script
+
+## Project Purpose
+The main purpose of this project is to create Pandas script to analyze the job application data, including generating summary statistics and visualization chart.
 
 
+## Project Data Source
+The project uses the job applicant information provided by United States Government, which includes the number of job applicants by gender. You can find more information about data via link here: https://catalog.data.gov/dataset/?tags=employment&tags=jobs
 
-1. First thing to do on launch is to open a new shell and verify virtualenv is sourced.
+## Project Key Steps
+1. Read job applicant csv file into dataframe.
+2. Create a function call "stats_overview" to summarize key statistics, such as count, mean, median, standard deviation, etc.
+![alt text](image.png)
 
-Things included are:
-
-* `Makefile`
-
-* `Pytest`
-
-* `pandas`
-
-* `Ruff`:  
-
-Run `make lint` which runs `ruff check`.  You can find out more info on [Ruff here](https://github.com/astral-sh/ruff).
-
-* `Dockerfile`
-
-* `GitHub copilot`
-
-* `jupyter` and `ipython` 
-
-* A base set of libraries for devops and web
-
-* `githubactions`
-
-## References
-
-![1 1-function-essence-of-programming](https://github.com/nogibjj/python-ruff-template/assets/58792/f7f33cd3-cff5-4014-98ea-09b6a29c7557)
+3. Visualize data using matplotlib.
+![alt text](image-1.png)
 
 
 
