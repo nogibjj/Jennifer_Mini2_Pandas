@@ -42,10 +42,6 @@ def test_stats_overview():
 def test_gender_chart():
     data = {"Female": [40, 80, 70], "Male": [60, 110, 80]}
     df = pd.DataFrame(data)
-
-    # Calculate gender totals
-    gender_total = df.sum()
-
     # Basic checks
     assert len(plt.gca().patches) == 2, "There should be 2 bars in the chart"
     assert (
