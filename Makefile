@@ -1,20 +1,21 @@
 install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	pip install --upgrade pip && pip install -r requirements.txt
 
-# test:
-# 	python -m pytest -vv --cov=main test_*.py
-
-test:
-	pytest --ignore=test_main.py
-
-format:	
-	black *.py 
+format:
+	black *.py
 
 lint:
-	#disable comment to test speed
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
-	#ruff linting is 10-100X faster than pylint
-	#ruff check *.py test_*.py
 
-all: install lint test format 
+test:
+	python -m pytest --cov=main test_main.py
+
+generate:
+	python test_main.py
+	git config --local user.email "action@github.com"
+	git config --local user.name "GitHub Action"
+	git add .
+	git commit -m "test"
+	git push
+
+all: install format lint test
