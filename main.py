@@ -55,4 +55,7 @@ def gender_chart():
 
 if __name__ == "__main__":
     stats_overview()
+    total_applicants(job_applicants_df)
+    total_female_applicants(job_applicants_df)
+    total_male_applicants(job_applicants_df)
     gender_chart()
