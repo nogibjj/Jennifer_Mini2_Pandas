@@ -4,6 +4,27 @@ import matplotlib.pyplot as plt
 # Load job applicant csv file into dataframe
 job_applicants_df = pd.read_csv("Job_Applicants_by_Gender_and_Ethnicity.csv")
 
+
+# Calculate total number of applicants
+def total_applicants(job_applicants_df):
+    total_apps = job_applicants_df["Apps Received"].sum()
+    print(f"Total applicants: {total_apps}")
+    return total_apps
+
+
+# calculate total number of applicants by gender
+def total_female_applicants(job_applicants_df):
+    total_female_applicants = job_applicants_df["Female"].sum()
+    print(f"Total female applicants: {total_female_applicants}")
+    return total_female_applicants
+
+
+def total_male_applicants(job_applicants_df):
+    total_male_applicants = job_applicants_df["Male"].sum()
+    print(f"Total male applicants: {total_male_applicants}")
+    return total_male_applicants
+
+
 gender_total = job_applicants_df[["Female", "Male"]].sum()
 
 
@@ -19,6 +40,7 @@ def stats_overview():
     ].sum()
     summary_stats = summary_stats.round(2)
     print(summary_stats)
+    return summary_stats
 
 
 # Data visualization: Gender chart
