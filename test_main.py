@@ -3,7 +3,7 @@ Test goes here
 
 """
 
-from main import stats_overview, gender_chart
+# from main import stats_overview, gender_chart
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -41,7 +41,6 @@ def test_stats_overview():
 
 def test_gender_chart():
     data = {"Female": [40, 80, 70], "Male": [60, 110, 80]}
-    df = pd.DataFrame(data)
     # Basic checks
     assert len(plt.gca().patches) == 2, "There should be 2 bars in the chart"
     assert (
