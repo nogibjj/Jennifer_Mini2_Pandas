@@ -11,9 +11,11 @@ The project uses the job applicant information provided by United States Governm
 ## Project Key Steps
 1. Read job applicant csv file into dataframe.
 2. Create a function call "stats_overview" to summarize key statistics, such as count, mean, median, standard deviation, etc.
+
 ![alt text](image.png)
 
 3. Visualize data using matplotlib.
+
 ![alt text](image-1.png)
 
 

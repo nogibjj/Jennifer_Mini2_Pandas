@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 
 # Load job applicant csv file into dataframe
@@ -25,7 +24,7 @@ def stats_overview():
 # Data visualization: Gender chart
 def gender_chart():
     plt.figure(figsize=(10, 6))
-    bars = plt.bar(gender_total.index, gender_total.values)
+    plt.bar(gender_total.index, gender_total.values)
     plt.title("Number of Applicants by Gender")
     plt.xlabel("Gender")
     plt.ylabel("Number of Applicants")
