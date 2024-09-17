@@ -7,20 +7,20 @@ job_applicants_df = pd.read_csv("Job_Applicants_by_Gender_and_Ethnicity.csv")
 
 # Calculate total number of applicants
 def total_applicants(df):
-    total_apps = job_applicants_df["Apps Received"].sum()
+    total_apps = df["Apps Received"].sum()
     print(f"Total applicants: {total_apps}")
     return total_apps
 
 
 # calculate total number of applicants by gender
 def total_female_applicants(df):
-    total_female_applicants = job_applicants_df["Female"].sum()
+    total_female_applicants = df["Female"].sum()
     print(f"Total female applicants: {total_female_applicants}")
     return total_female_applicants
 
 
 def total_male_applicants(df):
-    total_male_applicants = job_applicants_df["Male"].sum()
+    total_male_applicants = df["Male"].sum()
     print(f"Total male applicants: {total_male_applicants}")
     return total_male_applicants
 
