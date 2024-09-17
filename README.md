@@ -1,3 +1,4 @@
+[![CI](https://github.com/nogibjj/Jennifer_Mini2_Pandas/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Jennifer_Mini2_Pandas/actions/workflows/cicd.yml)
 
 # Mini Project 2: Pandas Script
 
