@@ -3,7 +3,7 @@ Test goes here
 
 """
 
-from main import total_applicants, total_female_applicants, total_male_applicants
+from main import total_applicants, total_female_applicant, total_male_applicant
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -25,12 +25,12 @@ def test_total_applicants():
 
 
 def test_female_applicants():
-    assert total_female_applicants(sample_df) == 190
+    assert total_female_applicant(sample_df) == 190
     print("total_female_applicants test passed!")
 
 
 def test_male_applicants():
-    assert total_male_applicants(sample_df) == 250
+    assert total_male_applicant(sample_df) == 250
     print("total_male_applicants test passed!")
 
 
