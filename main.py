@@ -13,13 +13,13 @@ def total_applicants(df):
 
 
 # calculate total number of applicants by gender
-def total_female_applicants(df):
+def total_female_applicant(df):
     total_female_applicants = df["Female"].sum()
     print(f"Total female applicants: {total_female_applicants}")
     return total_female_applicants
 
 
-def total_male_applicants(df):
+def total_male_applicant(df):
     total_male_applicants = df["Male"].sum()
     print(f"Total male applicants: {total_male_applicants}")
     return total_male_applicants
@@ -56,6 +56,6 @@ def gender_chart():
 if __name__ == "__main__":
     stats_overview()
     total_applicants(job_applicants_df)
-    total_female_applicants(job_applicants_df)
-    total_male_applicants(job_applicants_df)
+    total_female_applicant(job_applicants_df)
+    total_male_applicant(job_applicants_df)
     gender_chart()
